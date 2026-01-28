@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SOFTWERA INNOVATION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ui-config.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation: Floating Island Style -->
+    <nav class="floating-nav-wrapper">
+        <div class="nav-pill">
+            <div class="logo">
+                <a href="index.html">SOFTWERA<span>INNOVATION</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="work.html" class="nav-item">Work</a>
+                <a href="company.html" class="nav-item">Company</a>
+
+                <div class="nav-item-services nav-item">
+                    <a href="services.html" class="services-trigger">Services</a>
+                    <!-- Mega Menu Dropdown -->
+                    <div class="mega-menu">
+                        <!-- Column 1 -->
+                        <div class="mega-column">
+                            <div class="mega-group active">
+                                <div class="group-header">
+                                    <span class="group-icon">−</span>
+                                    <h4 class="active-title">Mobile App Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Native App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Hybrid App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Progressive Web App Development</a>
+                                    <a href="services.html" class="mega-sub-item">App Migrations & Integrations</a>
+                                    <a href="services.html" class="mega-sub-item">App Support & Maintenance</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Web Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Frontend Development
+                                        (React/Next.js)</a>
+                                    <a href="services.html" class="mega-sub-item">Backend & APIs (Node/Python)</a>
+                                    <a href="services.html" class="mega-sub-item">Full Stack Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">E-commerce Development</a>
+                                    <a href="services.html" class="mega-sub-item">CMS Integration</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>AI & Machine Learning</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Custom LLM Training</a>
+                                    <a href="services.html" class="mega-sub-item">Computer Vision</a>
+                                    <a href="services.html" class="mega-sub-item">NLP Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">Predictive Analytics</a>
+                                    <a href="services.html" class="mega-sub-item">AI Strategy Consulting</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>UI/UX & Product Design</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">User Research</a>
+                                    <a href="services.html" class="mega-sub-item">Wireframing & Prototyping</a>
+                                    <a href="services.html" class="mega-sub-item">Visual Identity Design</a>
+                                    <a href="services.html" class="mega-sub-item">Design Systems</a>
+                                    <a href="services.html" class="mega-sub-item">Motion Design</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Cloud & DevOps</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">AWS/Google Cloud Setup</a>
+                                    <a href="services.html" class="mega-sub-item">CI/CD Pipeline Automation</a>
+                                    <a href="services.html" class="mega-sub-item">Serverless Architecture</a>
+                                    <a href="services.html" class="mega-sub-item">Security Auditing</a>
+                                    <a href="services.html" class="mega-sub-item">Infrastructure as Code</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Marketing & Growth</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Search Engine Optimization</a>
+                                    <a href="services.html" class="mega-sub-item">Content Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Performance Marketing</a>
+                                    <a href="services.html" class="mega-sub-item">Social Media Management</a>
+                                    <a href="services.html" class="mega-sub-item">Conversion Rate Optimization</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Game Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Unity & Unreal Engine</a>
+                                    <a href="services.html" class="mega-sub-item">2D/3D Art & Animation</a>
+                                    <a href="services.html" class="mega-sub-item">Multiplayer Systems</a>
+                                    <a href="services.html" class="mega-sub-item">AR/VR Experiences</a>
+                                    <a href="services.html" class="mega-sub-item">Roblox Game Creation</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Resource Augmentation</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Dedicated Developers</a>
+                                    <a href="services.html" class="mega-sub-item">Team Extension</a>
+                                    <a href="services.html" class="mega-sub-item">Project Managers</a>
+                                    <a href="services.html" class="mega-sub-item">QA Engineers</a>
+                                    <a href="services.html" class="mega-sub-item">Tech Lead Consulting</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Innovation & Strategy</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Digital Transformation</a>
+                                    <a href="services.html" class="mega-sub-item">Product Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Feasibility Studies</a>
+                                    <a href="services.html" class="mega-sub-item">MVP Development</a>
+                                    <a href="services.html" class="mega-sub-item">Project Rescue</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="careers.html" class="nav-item">Careers</a>
+            </div>
+
+            <a href="contact.html" class="nav-cta">
+                Get in touch ↗
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-64 pb-32 px-10">
+        <div class="container mx-auto grid md:grid-cols-2 gap-32">
+            <div class="reveal">
+                <p class="small-heading mb-6">Contact Us</p>
+                <h1 class="text-7xl md:text-[10rem] mb-12 leading-[0.85] font-black tracking-tighter grad-text">Let's
+                    <br> Build.
+                </h1>
+                <p class="text-xl text-muted max-w-md mb-20 font-medium">Ready to transform your vision into an
+                    AI-powered reality? Reach out and start a conversation.</p>
+
+                <div class="space-y-12">
+                    <div>
+                        <h4 class="text-[10px] font-black uppercase tracking-[0.4em] text-brand mb-4">Location</h4>
+                        <p class="text-2xl font-bold">Atlanta, GA / Global</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal">
+                <form class="glass p-16 rounded-[4rem] border-white/5 space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="flex flex-col space-y-3">
+                            <label class="text-[10px] font-black uppercase tracking-[0.4em] text-muted">Full
+                                Name</label>
+                            <input type="text" placeholder="John Doe"
+                                class="bg-white/[0.03] border border-white/5 rounded-2xl px-8 py-5 focus:outline-none focus:border-white transition font-medium">
+                        </div>
+                        <div class="flex flex-col space-y-3">
+                            <label class="text-[10px] font-black uppercase tracking-[0.4em] text-muted">Email
+                                Address</label>
+                            <input type="email" placeholder="john@example.com"
+                                class="bg-white/[0.03] border border-white/5 rounded-2xl px-8 py-5 focus:outline-none focus:border-white transition font-medium">
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-white text-dark py-6 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-brand hover:text-light transition-all duration-500">Send
+                        Message</button>
+                    <p class="text-center text-[10px] text-muted font-bold uppercase tracking-widest">or email <a
+                            href="mailto:hello@antimatterai.com"
+                            class="text-light hover:text-brand transition">hello@antimatterai.com</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Redesigned Premium Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">SOFTWERA<span class="text-brand">INNOVATION</span></a>
+                <p>Empowering forward-thinking organizations with design-led engineering and intelligent AI solutions.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="work.html" class="footer-link">Portfolio</a>
+                <a href="company.html" class="footer-link">Our Story</a>
+                <a href="about.html" class="footer-link">Team</a>
+                <a href="careers.html" class="footer-link">Careers</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html" class="footer-link">Product Design</a>
+                <a href="services.html" class="footer-link">AI Engineering</a>
+                <a href="services.html" class="footer-link">Web Ecosystems</a>
+                <a href="services.html" class="footer-link">Cloud Solutions</a>
+                <a href="services.html" class="footer-link">Dedicated Teams</a>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="mailto:hello@softwera.com" class="footer-link">hello@softwera.com</a>
+                <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Twitter / X</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 SOFTWERA INNOVATION. ALL RIGHTS RESERVED.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link">Privacy Policy</a>
+                <a href="#" class="social-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

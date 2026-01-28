@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | SOFTWERA INNOVATION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ui-config.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation: Floating Island Style -->
+    <nav class="floating-nav-wrapper">
+        <div class="nav-pill">
+            <div class="logo">
+                <a href="index.html">SOFTWERA<span>INNOVATION</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="work.html" class="nav-item">Work</a>
+                <a href="company.html" class="nav-item">Company</a>
+
+                <div class="nav-item-services nav-item">
+                    <a href="services.html" class="services-trigger">Services</a>
+                    <!-- Mega Menu Dropdown -->
+                    <div class="mega-menu">
+                        <!-- Column 1 -->
+                        <div class="mega-column">
+                            <div class="mega-group active">
+                                <div class="group-header">
+                                    <span class="group-icon">−</span>
+                                    <h4 class="active-title">Mobile App Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Native App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Hybrid App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Progressive Web App Development</a>
+                                    <a href="services.html" class="mega-sub-item">App Migrations & Integrations</a>
+                                    <a href="services.html" class="mega-sub-item">App Support & Maintenance</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Web Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Frontend Development
+                                        (React/Next.js)</a>
+                                    <a href="services.html" class="mega-sub-item">Backend & APIs (Node/Python)</a>
+                                    <a href="services.html" class="mega-sub-item">Full Stack Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">E-commerce Development</a>
+                                    <a href="services.html" class="mega-sub-item">CMS Integration</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>AI & Machine Learning</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Custom LLM Training</a>
+                                    <a href="services.html" class="mega-sub-item">Computer Vision</a>
+                                    <a href="services.html" class="mega-sub-item">NLP Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">Predictive Analytics</a>
+                                    <a href="services.html" class="mega-sub-item">AI Strategy Consulting</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>UI/UX & Product Design</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">User Research</a>
+                                    <a href="services.html" class="mega-sub-item">Wireframing & Prototyping</a>
+                                    <a href="services.html" class="mega-sub-item">Visual Identity Design</a>
+                                    <a href="services.html" class="mega-sub-item">Design Systems</a>
+                                    <a href="services.html" class="mega-sub-item">Motion Design</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Cloud & DevOps</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">AWS/Google Cloud Setup</a>
+                                    <a href="services.html" class="mega-sub-item">CI/CD Pipeline Automation</a>
+                                    <a href="services.html" class="mega-sub-item">Serverless Architecture</a>
+                                    <a href="services.html" class="mega-sub-item">Security Auditing</a>
+                                    <a href="services.html" class="mega-sub-item">Infrastructure as Code</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Marketing & Growth</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Search Engine Optimization</a>
+                                    <a href="services.html" class="mega-sub-item">Content Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Performance Marketing</a>
+                                    <a href="services.html" class="mega-sub-item">Social Media Management</a>
+                                    <a href="services.html" class="mega-sub-item">Conversion Rate Optimization</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Game Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Unity & Unreal Engine</a>
+                                    <a href="services.html" class="mega-sub-item">2D/3D Art & Animation</a>
+                                    <a href="services.html" class="mega-sub-item">Multiplayer Systems</a>
+                                    <a href="services.html" class="mega-sub-item">AR/VR Experiences</a>
+                                    <a href="services.html" class="mega-sub-item">Roblox Game Creation</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Resource Augmentation</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Dedicated Developers</a>
+                                    <a href="services.html" class="mega-sub-item">Team Extension</a>
+                                    <a href="services.html" class="mega-sub-item">Project Managers</a>
+                                    <a href="services.html" class="mega-sub-item">QA Engineers</a>
+                                    <a href="services.html" class="mega-sub-item">Tech Lead Consulting</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Innovation & Strategy</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Digital Transformation</a>
+                                    <a href="services.html" class="mega-sub-item">Product Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Feasibility Studies</a>
+                                    <a href="services.html" class="mega-sub-item">MVP Development</a>
+                                    <a href="services.html" class="mega-sub-item">Project Rescue</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="careers.html" class="nav-item">Careers</a>
+            </div>
+
+            <a href="contact.html" class="nav-cta">
+                Get in touch ↗
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-48 pb-32 px-10 bg-black">
+        <div class="container mx-auto grid md:grid-cols-12 gap-12 items-start">
+            <!-- Left Branding Slogan -->
+            <div class="md:col-span-4 reveal pt-3">
+                <p class="h-sm mb-6 text-light/40">
+                    END-TO-END CAPABILITIES
+                </p>
+            </div>
+
+            <!-- Main Statement -->
+            <div class="md:col-span-8 reveal">
+                <h1 class="h-lg font-bold leading-[1.1] tracking-tight mb-16 text-white">
+                    Expert solutions designed to scale your business and automate your future.
+                </h1>
+
+                <p class="p-main max-w-2xl text-lg md:text-xl text-white/60">
+                    From initial concept to final deployment, we provide a comprehensive suite of digital services
+                    tailored to your unique challenges.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Detailed Services List -->
+    <section class="py-24 px-10 border-t border-white/5 bg-black">
+        <div class="container mx-auto flex flex-col gap-32">
+
+            <!-- Service 01: Mobile App Development -->
+            <div class="grid md:grid-cols-12 gap-12 border-b border-white/5 pb-24 last:border-0 reveal"
+                id="mobile-app-development">
+                <div class="md:col-span-4">
+                    <span class="text-brand font-black text-6xl opacity-20 block mb-4">01</span>
+                    <h3 class="h-lg grad-text mb-6">Mobile App Development</h3>
+                </div>
+                <div class="md:col-span-8">
+                    <p class="p-main mb-12 max-w-3xl">
+                        We build high-performance mobile applications that offer seamless user experiences across iOS
+                        and
+                        Android. Whether native or hybrid, our apps are designed for speed, scalability, and engagement.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-12">
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Native iOS (Swift)
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Native Android (Kotlin)
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            React Native
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Flutter
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            App Maintenance
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            App Store Optimization
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 02: Web Development -->
+            <div class="grid md:grid-cols-12 gap-12 border-b border-white/5 pb-24 last:border-0 reveal"
+                id="web-development">
+                <div class="md:col-span-4">
+                    <span class="text-brand font-black text-6xl opacity-20 block mb-4">02</span>
+                    <h3 class="h-lg grad-text mb-6">Web Development</h3>
+                </div>
+                <div class="md:col-span-8">
+                    <p class="p-main mb-12 max-w-3xl">
+                        From complex enterprise platforms to dynamic consumer-facing websites, we engineer robust web
+                        solutions. Our full-stack expertise ensures your web presence is fast, secure, and ready to
+                        scale.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-12">
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Next.js & React
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Node.js & Python
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            E-commerce (Shopify/Woo)
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Webflow Development
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            CMS Integration
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            PWA Development
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 03: UI/UX & Product Design -->
+            <div class="grid md:grid-cols-12 gap-12 border-b border-white/5 pb-24 last:border-0 reveal"
+                id="ui-ux-design">
+                <div class="md:col-span-4">
+                    <span class="text-brand font-black text-6xl opacity-20 block mb-4">03</span>
+                    <h3 class="h-lg grad-text mb-6">UI/UX & Product Design</h3>
+                </div>
+                <div class="md:col-span-8">
+                    <p class="p-main mb-12 max-w-3xl">
+                        We blend aesthetics with functionality. Our design process starts with deep user research and
+                        moves through wireframing to high-fidelity prototypes, ensuring every interaction is intuitive.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-12">
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            User Research
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Wireframing
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Visual Identity
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Design Systems
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Prototyping
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Motion Design
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 04: AI & Machine Learning -->
+            <div class="grid md:grid-cols-12 gap-12 border-b border-white/5 pb-24 last:border-0 reveal"
+                id="ai-machine-learning">
+                <div class="md:col-span-4">
+                    <span class="text-brand font-black text-6xl opacity-20 block mb-4">04</span>
+                    <h3 class="h-lg grad-text mb-6">AI & Machine Learning</h3>
+                </div>
+                <div class="md:col-span-8">
+                    <p class="p-main mb-12 max-w-3xl">
+                        Unlock the power of your data. We design and deploy custom AI models, from predictive analytics
+                        to large language models, helping you automate workflows and gain strategic insights.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-12">
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Custom LLM Training
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Computer Vision
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            NLP Solutions
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Predictive Analytics
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Process Automation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 05: Game Development -->
+            <div class="grid md:grid-cols-12 gap-12 border-b border-white/5 pb-24 last:border-0 reveal"
+                id="game-development">
+                <div class="md:col-span-4">
+                    <span class="text-brand font-black text-6xl opacity-20 block mb-4">05</span>
+                    <h3 class="h-lg grad-text mb-6">Game Development</h3>
+                </div>
+                <div class="md:col-span-8">
+                    <p class="p-main mb-12 max-w-3xl">
+                        Immersive worlds built for engagement. Our team of game developers and artists create stunning
+                        2D and 3D experiences across mobile, PC, and web platforms.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-12">
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Unity Development
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Unreal Engine 5
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            AR/VR Experiences
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            2D/3D Asset Creation
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Multiplayer Systems
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 06: SaaS & Cloud -->
+            <div class="grid md:grid-cols-12 gap-12 border-b border-white/5 pb-24 last:border-0 reveal"
+                id="cloud-devops">
+                <div class="md:col-span-4">
+                    <span class="text-brand font-black text-6xl opacity-20 block mb-4">06</span>
+                    <h3 class="h-lg grad-text mb-6">SaaS & Cloud</h3>
+                </div>
+                <div class="md:col-span-8">
+                    <p class="p-main mb-12 max-w-3xl">
+                        We design scalable cloud architectures that grow with your business. From DevOps automation to
+                        complete SaaS platform development, we ensure security and reliability.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-12">
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            AWS / Google Cloud
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            CI/CD Pipelines
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Microservices
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Docker/Kubernetes
+                        </a>
+                        <a href="#"
+                            class="group flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+                            Cloud Security
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Expanded Tech Stack Grid -->
+    <section class="py-24 px-10 border-t border-b border-white/5 bg-black/50 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="h-sm mb-4 block">Our Arsenal</span>
+                <h2 class="h-md text-3xl md:text-5xl text-white">Technological Expertise</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Frontend Card -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <h4 class="text-xl font-bold text-white mb-6 group-hover:text-brand transition-colors">Frontend</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">React.js</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Next.js</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Vue.js</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Angular</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">TailwindCSS</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Three.js</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">GSAP</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- Backend Card -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <h4 class="text-xl font-bold text-white mb-6 group-hover:text-brand transition-colors">Backend</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Node.js</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Python</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Django</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">FastAPI</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Go</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Rust</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">GraphQL</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">PostgreSQL</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Card -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <h4 class="text-xl font-bold text-white mb-6 group-hover:text-brand transition-colors">Mobile</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Swift</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Kotlin</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">React
+                            Native</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Flutter</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Expo</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">SwiftUI</span>
+                    </div>
+                </div>
+
+                <!-- AI & ML -->
+                <!-- AI & Data Card -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <h4 class="text-xl font-bold text-white mb-6 group-hover:text-brand transition-colors">AI & Data
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">TensorFlow</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">PyTorch</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">OpenAI</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">LangChain</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Pandas</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Scikit-learn</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Pinecone</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & Infrastructure -->
+                <!-- Cloud Card -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <h4 class="text-xl font-bold text-white mb-6 group-hover:text-brand transition-colors">Cloud &
+                        DevOps</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">AWS</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">GCP</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Azure</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Docker</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Kubernetes</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Terraform</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Design & Creative -->
+                <!-- Creative Card -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <h4 class="text-xl font-bold text-white mb-6 group-hover:text-brand transition-colors">Design &
+                        Creative</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Figma</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Adobe
+                            Suite</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Blender</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Spline</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Cinema
+                            4D</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Rive</span>
+                    </div>
+                </div>
+
+                <!-- Game Dev -->
+                <!-- Game Dev Card -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <h4 class="text-xl font-bold text-white mb-6 group-hover:text-brand transition-colors">Game & AR/VR
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Unity</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Unreal
+                            5</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">C#
+                            / C++</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">ARKit</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Roblox</span>
+                    </div>
+                </div>
+
+                <!-- CMS & E-com -->
+                <!-- Platforms Card -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <h4 class="text-xl font-bold text-white mb-6 group-hover:text-brand transition-colors">Platforms
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Shopify</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">WordPress</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Webflow</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Strapi</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Sanity</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-white/5 text-xs font-medium text-white/60 border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all">Stripe</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Redesigned Premium Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">SOFTWERA<span class="text-brand">INNOVATION</span></a>
+                <p>Empowering forward-thinking organizations with design-led engineering and intelligent AI solutions.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="work.html" class="footer-link">Portfolio</a>
+                <a href="company.html" class="footer-link">Our Story</a>
+                <a href="about.html" class="footer-link">Team</a>
+                <a href="careers.html" class="footer-link">Careers</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html" class="footer-link">Product Design</a>
+                <a href="services.html" class="footer-link">AI Engineering</a>
+                <a href="services.html" class="footer-link">Web Ecosystems</a>
+                <a href="services.html" class="footer-link">Cloud Solutions</a>
+                <a href="services.html" class="footer-link">Dedicated Teams</a>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="mailto:hello@softwera.com" class="footer-link">hello@softwera.com</a>
+                <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Twitter / X</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 SOFTWERA INNOVATION. ALL RIGHTS RESERVED.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link">Privacy Policy</a>
+                <a href="#" class="social-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

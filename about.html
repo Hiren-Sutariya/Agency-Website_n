@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | SOFTWERA INNOVATION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ui-config.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation: Floating Island Style -->
+    <nav class="floating-nav-wrapper">
+        <div class="nav-pill">
+            <div class="logo">
+                <a href="index.html">SOFTWERA<span>INNOVATION</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="work.html" class="nav-item">Work</a>
+                <a href="company.html" class="nav-item">Company</a>
+
+                <div class="nav-item-services nav-item">
+                    <a href="services.html" class="services-trigger">Services</a>
+                    <!-- Mega Menu Dropdown -->
+                    <div class="mega-menu">
+                        <!-- Column 1 -->
+                        <div class="mega-column">
+                            <div class="mega-group active">
+                                <div class="group-header">
+                                    <span class="group-icon">−</span>
+                                    <h4 class="active-title">Mobile App Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Native App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Hybrid App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Progressive Web App Development</a>
+                                    <a href="services.html" class="mega-sub-item">App Migrations & Integrations</a>
+                                    <a href="services.html" class="mega-sub-item">App Support & Maintenance</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Web Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Frontend Development
+                                        (React/Next.js)</a>
+                                    <a href="services.html" class="mega-sub-item">Backend & APIs (Node/Python)</a>
+                                    <a href="services.html" class="mega-sub-item">Full Stack Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">E-commerce Development</a>
+                                    <a href="services.html" class="mega-sub-item">CMS Integration</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>AI & Machine Learning</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Custom LLM Training</a>
+                                    <a href="services.html" class="mega-sub-item">Computer Vision</a>
+                                    <a href="services.html" class="mega-sub-item">NLP Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">Predictive Analytics</a>
+                                    <a href="services.html" class="mega-sub-item">AI Strategy Consulting</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>UI/UX & Product Design</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">User Research</a>
+                                    <a href="services.html" class="mega-sub-item">Wireframing & Prototyping</a>
+                                    <a href="services.html" class="mega-sub-item">Visual Identity Design</a>
+                                    <a href="services.html" class="mega-sub-item">Design Systems</a>
+                                    <a href="services.html" class="mega-sub-item">Motion Design</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Cloud & DevOps</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">AWS/Google Cloud Setup</a>
+                                    <a href="services.html" class="mega-sub-item">CI/CD Pipeline Automation</a>
+                                    <a href="services.html" class="mega-sub-item">Serverless Architecture</a>
+                                    <a href="services.html" class="mega-sub-item">Security Auditing</a>
+                                    <a href="services.html" class="mega-sub-item">Infrastructure as Code</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Marketing & Growth</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Search Engine Optimization</a>
+                                    <a href="services.html" class="mega-sub-item">Content Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Performance Marketing</a>
+                                    <a href="services.html" class="mega-sub-item">Social Media Management</a>
+                                    <a href="services.html" class="mega-sub-item">Conversion Rate Optimization</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Game Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Unity & Unreal Engine</a>
+                                    <a href="services.html" class="mega-sub-item">2D/3D Art & Animation</a>
+                                    <a href="services.html" class="mega-sub-item">Multiplayer Systems</a>
+                                    <a href="services.html" class="mega-sub-item">AR/VR Experiences</a>
+                                    <a href="services.html" class="mega-sub-item">Roblox Game Creation</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Resource Augmentation</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Dedicated Developers</a>
+                                    <a href="services.html" class="mega-sub-item">Team Extension</a>
+                                    <a href="services.html" class="mega-sub-item">Project Managers</a>
+                                    <a href="services.html" class="mega-sub-item">QA Engineers</a>
+                                    <a href="services.html" class="mega-sub-item">Tech Lead Consulting</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Innovation & Strategy</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Digital Transformation</a>
+                                    <a href="services.html" class="mega-sub-item">Product Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Feasibility Studies</a>
+                                    <a href="services.html" class="mega-sub-item">MVP Development</a>
+                                    <a href="services.html" class="mega-sub-item">Project Rescue</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="careers.html" class="nav-item">Careers</a>
+            </div>
+
+            <a href="contact.html" class="nav-cta">
+                Get in touch ↗
+            </a>
+        </div>
+    </nav>
+
+    <!-- Premium Hero Section -->
+    <header class="pt-48 pb-24 px-10">
+        <div class="container mx-auto grid md:grid-cols-12 gap-12 items-start">
+            <div class="md:col-span-4 reveal pt-3">
+                <p class="h-sm mb-6 text-brand">WHO WE ARE</p>
+            </div>
+            <div class="md:col-span-8 reveal">
+                <h1 class="h-lg font-bold leading-[1.1] tracking-tight mb-12 text-white">
+                    We are a collective of visionaries, engineers, and designers unified by a single purpose: <span
+                        class="grad-text">to redefine what's possible.</span>
+                </h1>
+                <p class="p-main text-lg md:text-xl text-white/60 max-w-2xl">
+                    Founded in 2020, Softwera Innovation has grown from a small design studio into a global digital
+                    consultancy. We bridge the gap between human creativity and artificial intelligence.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Values Section -->
+    <section class="py-24 px-10 border-t border-white/5 bg-black/30">
+        <div class="container mx-auto">
+            <div class="mb-20 reveal">
+                <span class="h-sm mb-4 block">OUR DNA</span>
+                <h2 class="h-md text-3xl md:text-5xl text-white">Core Values</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div
+                    class="glass p-10 rounded-[2rem] border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <span class="text-4xl mb-6 block">⚡️</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">Relentless Innovation</h3>
+                    <p class="text-white/60 leading-relaxed">
+                        We don't just follow trends; we set them. We constantly explore the bleeding edge of technology
+                        to find new solutions.
+                    </p>
+                </div>
+
+                <!-- Value 2 -->
+                <div
+                    class="glass p-10 rounded-[2rem] border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <span class="text-4xl mb-6 block">🎨</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">Design-First Thinking</h3>
+                    <p class="text-white/60 leading-relaxed">
+                        Aesthetics aren't an afterthought. We believe true functionality is inseparable from beautiful,
+                        intuitive design.
+                    </p>
+                </div>
+
+                <!-- Value 3 -->
+                <div
+                    class="glass p-10 rounded-[2rem] border border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 group reveal">
+                    <span class="text-4xl mb-6 block">🤝</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">Radical Transparency</h3>
+                    <p class="text-white/60 leading-relaxed">
+                        We build trust through openness. No hidden costs, no jargon—just clear communication and shared
+                        goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-24 px-10 border-t border-white/5 bg-black">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="h-sm mb-6 block text-brand">WHY CHOOSE US</span>
+                    <h2 class="h-md text-3xl md:text-5xl text-white mb-8">Engineering trust through code and creativity.
+                    </h2>
+                    <p class="p-main text-white/60 text-lg mb-8">
+                        We don't just build software; we build distinct competitive advantages. Our multidisciplinary
+                        team combines deep technical expertise with world-class design to deliver products that stand
+                        out.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 text-white/80">
+                            <span class="w-2 h-2 rounded-full bg-brand"></span>
+                            Direct access to senior engineers
+                        </li>
+                        <li class="flex items-center gap-4 text-white/80">
+                            <span class="w-2 h-2 rounded-full bg-brand"></span>
+                            Rapid prototyping and iteration
+                        </li>
+                        <li class="flex items-center gap-4 text-white/80">
+                            <span class="w-2 h-2 rounded-full bg-brand"></span>
+                            Scalable architecture from day one
+                        </li>
+                        <li class="flex items-center gap-4 text-white/80">
+                            <span class="w-2 h-2 rounded-full bg-brand"></span>
+                            Post-launch growth support
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="aspect-[4/3] rounded-[3rem] overflow-hidden relative group">
+                        <!-- Placeholder for a high-quality office or team image -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-brand/20 to-purple-900/40 mix-blend-overlay z-10 transition-opacity duration-500 group-hover:opacity-0">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000"
+                            alt="Team Collaboration"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="py-32 px-10 border-t border-white/5 bg-black/30">
+        <div class="container mx-auto">
+            <div class="text-center mb-24 reveal">
+                <span class="h-sm mb-4 block">TESTIMONIALS</span>
+                <h2 class="h-md text-3xl md:text-5xl text-white">Voices of Impact</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass p-10 rounded-3xl relative reveal">
+                    <div class="text-brand text-6xl font-serif absolute top-8 left-8 opacity-20">"</div>
+                    <p class="text-white/70 text-lg leading-relaxed mb-8 relative z-10 pt-4">
+                        Softwera transfromed our vague concept into a market-leading platform. Their ability to execute
+                        complex AI integrations while keeping the UI effortless is unmatched.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/10 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?bg=202020&fg=F5F5F5"
+                                alt="Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold">Alex Morgan</h5>
+                            <span class="text-xs text-brand uppercase tracking-wider">CTO, FinTech Global</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass p-10 rounded-3xl relative reveal md:-mt-8">
+                    <div class="text-brand text-6xl font-serif absolute top-8 left-8 opacity-20">"</div>
+                    <p class="text-white/70 text-lg leading-relaxed mb-8 relative z-10 pt-4">
+                        A true partnership. They didn't just take orders; they challenged our assumptions and improved
+                        our product strategy. The best investment we made this year.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/10 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?bg=202020&fg=F5F5F5"
+                                alt="Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold">Sarah Chen</h5>
+                            <span class="text-xs text-brand uppercase tracking-wider">Founder, HealthAI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass p-10 rounded-3xl relative reveal">
+                    <div class="text-brand text-6xl font-serif absolute top-8 left-8 opacity-20">"</div>
+                    <p class="text-white/70 text-lg leading-relaxed mb-8 relative z-10 pt-4">
+                        The design system they built for us has accelerated our development velocity by 300%. It's
+                        distinct, scalable, and simply beautiful code.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/10 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?bg=202020&fg=F5F5F5"
+                                alt="Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold">James Wilson</h5>
+                            <span class="text-xs text-brand uppercase tracking-wider">VP Product, Nexus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redesigned Premium Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">SOFTWERA<span class="text-brand">INNOVATION</span></a>
+                <p>Empowering forward-thinking organizations with design-led engineering and intelligent AI solutions.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="work.html" class="footer-link">Portfolio</a>
+                <a href="company.html" class="footer-link">Our Story</a>
+                <a href="about.html" class="footer-link">Team</a>
+                <a href="careers.html" class="footer-link">Careers</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html" class="footer-link">Product Design</a>
+                <a href="services.html" class="footer-link">AI Engineering</a>
+                <a href="services.html" class="footer-link">Web Ecosystems</a>
+                <a href="services.html" class="footer-link">Cloud Solutions</a>
+                <a href="services.html" class="footer-link">Dedicated Teams</a>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="mailto:hello@softwera.com" class="footer-link">hello@softwera.com</a>
+                <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Twitter / X</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 SOFTWERA INNOVATION. ALL RIGHTS RESERVED.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link">Privacy Policy</a>
+                <a href="#" class="social-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

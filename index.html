@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softwera Innovation AI | Design-led AI Studio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Custom Config -->
+    <script src="js/ui-config.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+
+    <!-- Creative Preloader: Sarcastic AI -->
+    <div id="preloader">
+        <div class="ai-loader-wrap">
+            <div class="ai-core">
+                <div class="ai-eye">
+                    <div class="ai-pupil"></div>
+                </div>
+            </div>
+
+            <div class="ai-status-wrap">
+                <div class="sarcastic-text glitch-text" id="loader-status" data-text="Connecting Brain Cells...">
+                    Connecting Brain Cells...</div>
+            </div>
+
+            <div class="ai-progress-bar-wrap">
+                <div class="ai-progress-bar" id="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation: Floating Island Style -->
+    <nav class="floating-nav-wrapper">
+        <div class="nav-pill">
+            <div class="logo">
+                <a href="index.html">SOFTWERA<span>INNOVATION</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="work.html" class="nav-item">Work</a>
+
+                <div class="nav-item-services nav-item">
+                    <a href="services.html" class="services-trigger">Services</a>
+                    <!-- Mega Menu Dropdown -->
+                    <div class="mega-menu">
+                        <!-- Column 1 -->
+                        <div class="mega-column">
+                            <div class="mega-group active">
+                                <div class="group-header">
+                                    <span class="group-icon">−</span>
+                                    <h4 class="active-title">Mobile App Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Native App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Hybrid App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Progressive Web App Development</a>
+                                    <a href="services.html" class="mega-sub-item">App Migrations & Integrations</a>
+                                    <a href="services.html" class="mega-sub-item">App Support & Maintenance</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Web Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Frontend Development
+                                        (React/Next.js)</a>
+                                    <a href="services.html" class="mega-sub-item">Backend & APIs (Node/Python)</a>
+                                    <a href="services.html" class="mega-sub-item">Full Stack Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">E-commerce Development</a>
+                                    <a href="services.html" class="mega-sub-item">CMS Integration</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>AI & Machine Learning</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Custom LLM Training</a>
+                                    <a href="services.html" class="mega-sub-item">Computer Vision</a>
+                                    <a href="services.html" class="mega-sub-item">NLP Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">Predictive Analytics</a>
+                                    <a href="services.html" class="mega-sub-item">AI Strategy Consulting</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>UI/UX & Product Design</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">User Research</a>
+                                    <a href="services.html" class="mega-sub-item">Wireframing & Prototyping</a>
+                                    <a href="services.html" class="mega-sub-item">Visual Identity Design</a>
+                                    <a href="services.html" class="mega-sub-item">Design Systems</a>
+                                    <a href="services.html" class="mega-sub-item">Motion Design</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Cloud & DevOps</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">AWS/Google Cloud Setup</a>
+                                    <a href="services.html" class="mega-sub-item">CI/CD Pipeline Automation</a>
+                                    <a href="services.html" class="mega-sub-item">Serverless Architecture</a>
+                                    <a href="services.html" class="mega-sub-item">Security Auditing</a>
+                                    <a href="services.html" class="mega-sub-item">Infrastructure as Code</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Marketing & Growth</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Search Engine Optimization</a>
+                                    <a href="services.html" class="mega-sub-item">Content Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Performance Marketing</a>
+                                    <a href="services.html" class="mega-sub-item">Social Media Management</a>
+                                    <a href="services.html" class="mega-sub-item">Conversion Rate Optimization</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Game Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Unity & Unreal Engine</a>
+                                    <a href="services.html" class="mega-sub-item">2D/3D Art & Animation</a>
+                                    <a href="services.html" class="mega-sub-item">Multiplayer Systems</a>
+                                    <a href="services.html" class="mega-sub-item">AR/VR Experiences</a>
+                                    <a href="services.html" class="mega-sub-item">Roblox Game Creation</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Resource Augmentation</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Dedicated Developers</a>
+                                    <a href="services.html" class="mega-sub-item">Team Extension</a>
+                                    <a href="services.html" class="mega-sub-item">Project Managers</a>
+                                    <a href="services.html" class="mega-sub-item">QA Engineers</a>
+                                    <a href="services.html" class="mega-sub-item">Tech Lead Consulting</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Innovation & Strategy</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Digital Transformation</a>
+                                    <a href="services.html" class="mega-sub-item">Product Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Feasibility Studies</a>
+                                    <a href="services.html" class="mega-sub-item">MVP Development</a>
+                                    <a href="services.html" class="mega-sub-item">Project Rescue</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="careers.html" class="nav-item">Careers</a>
+            </div>
+
+            <a href="contact.html" class="nav-cta">
+                Get in touch ↗
+            </a>
+        </div>
+    </nav>
+
+    <!-- Luxury Hero Section Combined -->
+    <section class="relative h-screen flex flex-col items-center justify-center text-center px-10 overflow-hidden">
+        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full -z-10 opacity-100"></canvas>
+
+        <!-- Background Text (Similar to antimatterai.com) -->
+        <div
+            class="absolute inset-0 flex items-center justify-center -z-20 opacity-[0.04] select-none pointer-events-none">
+            <h2 class="text-[35vw] font-black tracking-tighter leading-none text-white/10">SOFTWERA</h2>
+        </div>
+
+        <div class="max-w-6xl z-10 -mt-10">
+            <span class="h-sm mb-12 text-brand uppercase tracking-[0.4em] !text-[9px] block reveal">Empowering
+                Organizations with
+                AI</span>
+            <h1 class="mb-12 reveal !text-5xl md:!text-7xl tracking-tight leading-[1.0]">Building <em
+                    class="font-serif italic">Digital Solutions</em> <br>That Matter</h1>
+        </div>
+
+        <!-- Hero Footer Elements -->
+        <div class="absolute bottom-16 left-10 text-left max-w-sm hidden md:block reveal">
+            <p class="p-sub leading-relaxed mb-10 text-white/50 text-sm">
+                We empower organizations with AI that turns complex challenges into real-world outcomes.
+            </p>
+            <a href="contact.html"
+                class="bg-white text-dark px-10 py-5 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-brand hover:text-light transition-all duration-500 inline-block shadow-2xl">
+                Start Your Project
+            </a>
+        </div>
+
+        <!-- Stats Bar (Bottom-Right) -->
+        <div class="absolute bottom-16 right-10 flex gap-12 hidden md:flex items-end reveal">
+            <div class="flex flex-col items-end">
+                <span class="text-4xl font-bold tracking-tighter">1+</span>
+                <span class="text-[8px] font-black uppercase tracking-[0.3em] text-white/30 whitespace-nowrap">Years of
+                    Innovation</span>
+            </div>
+            <div class="flex flex-col items-end">
+                <span class="text-4xl font-bold tracking-tighter">15+</span>
+                <span class="text-[8px] font-black uppercase tracking-[0.3em] text-white/30 whitespace-nowrap">Projects
+                    Delivered</span>
+            </div>
+            <div class="flex flex-col items-end">
+                <span class="text-4xl font-bold tracking-tighter">4+</span>
+                <span class="text-[8px] font-black uppercase tracking-[0.3em] text-white/30 whitespace-nowrap">Strategic
+                    Pillars</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section class="relative" id="services">
+        <div class="services-pinned bg-dark">
+
+            <!-- Static Sidebar (Behind which cards slide) -->
+            <div class="services-sidebar">
+                <!-- 3D Animation Platform -->
+                <div id="animation-dock" class="relative z-20">
+                    <!-- Animation will be injected here by JS -->
+                </div>
+            </div>
+
+            <!-- Top Header (Static relative to pinned container) -->
+            <div class="services-header px-20">
+                <h2 class="h-lg grad-text reveal">Our Services</h2>
+                <div class="max-w-xs text-right">
+                    <p class="p-sub">
+                        We offer comprehensive digital solutions that transform your business and drive innovation
+                        across every touchpoint.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Horizontal Sliding Track -->
+            <div class="services-track" id="services-track">
+                <!-- Card 01: Web Development -->
+                <div class="service-item-card featured" onclick="location.href='services.html'">
+                    <div class="card-num p-sub">01</div>
+                    <div class="card-arrow">↗</div>
+                    <h3 class="h-md">Web <br> Development</h3>
+                    <p class="p-main !text-sm !opacity-60">High-performance web applications tailored to your needs,
+                        from enterprise platforms to dynamic consumer apps.</p>
+                    <div class="card-footer">
+                        <div class="footer-list">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>Next.js/React Apps</li>
+                                <li>PWA Development</li>
+                                <li>E-commerce Solutions</li>
+                                <li>API Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 02: Mobile App Development -->
+                <div class="service-item-card" onclick="location.href='services.html'">
+                    <div class="card-num p-sub">02</div>
+                    <div class="card-arrow">↗</div>
+                    <h3 class="h-md">Mobile App <br> Development</h3>
+                    <p class="p-main !text-sm !opacity-60">Powerful mobile experiences for iOS and Android, built with
+                        the latest
+                        technologies for seamless performance.</p>
+                    <div class="card-footer">
+                        <div class="footer-list">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>Native iOS/Android</li>
+                                <li>React Native/Flutter</li>
+                                <li>Mobile Strategy</li>
+                                <li>App Store Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 03: UI/UX & Product Design -->
+                <div class="service-item-card" onclick="location.href='services.html'">
+                    <div class="card-num p-sub">03</div>
+                    <div class="card-arrow">↗</div>
+                    <h3 class="h-md">UI/UX & <br> Product Design</h3>
+                    <p class="p-main !text-sm !opacity-60">End-to-end product design—from research and UX flows to
+                        polished UI systems and
+                        developer-ready handoff.</p>
+                    <div class="card-footer">
+                        <div class="footer-list">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>User Research & Strategy</li>
+                                <li>UX Flows & Wireframes</li>
+                                <li>UI Systems & Prototypes</li>
+                                <li>Design Ops & Handoff</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 04: AI & Automation Services -->
+                <div class="service-item-card" onclick="location.href='services.html'">
+                    <div class="card-num p-sub">04</div>
+                    <div class="card-arrow">↗</div>
+                    <h3 class="h-md">AI & <br> Automation</h3>
+                    <p class="p-main !text-sm !opacity-60">Cutting-edge AI solutions that automate workflows, predict
+                        trends, and provide
+                        deep data insights.</p>
+                    <div class="card-footer">
+                        <div class="footer-list">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>Custom LLM Training</li>
+                                <li>RAG Implementations</li>
+                                <li>Computer Vision</li>
+                                <li>Process Automation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 05: Game Development -->
+                <div class="service-item-card" onclick="location.href='services.html'">
+                    <div class="card-num p-sub">05</div>
+                    <div class="card-arrow">↗</div>
+                    <h3 class="h-md">Game <br> Development</h3>
+                    <p class="p-main !text-sm !opacity-60">Immersive gaming experiences across platforms, leveraging
+                        high-performance
+                        engines and creative storytelling.</p>
+                    <div class="card-footer">
+                        <div class="footer-list">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>2D/3D Game Dev</li>
+                                <li>VR/AR Experience</li>
+                                <li>Game Mechanics</li>
+                                <li>Technical Art</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 06: SaaS, DevOps & Cloud -->
+                <div class="service-item-card" onclick="location.href='services.html'">
+                    <div class="card-num p-sub">06</div>
+                    <div class="card-arrow">↗</div>
+                    <h3 class="h-md">SaaS, DevOps <br> & Cloud</h3>
+                    <p class="p-main !text-sm !opacity-60">Robust cloud architecture and deployment strategies to ensure
+                        your products are
+                        scalable and secure.</p>
+                    <div class="card-footer">
+                        <div class="footer-list">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>Cloud Migration</li>
+                                <li>CI/CD Pipelines</li>
+                                <li>Infrastructure (IaC)</li>
+                                <li>Security Audits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 07: CMS & No-Code Solutions -->
+                <div class="service-item-card" onclick="location.href='services.html'">
+                    <div class="card-num p-sub">08</div>
+                    <div class="card-arrow">↗</div>
+                    <h3 class="h-md">CMS & <br> No-Code</h3>
+                    <p class="p-main !text-sm !opacity-60">Rapid deployment using powerful no-code platforms and custom
+                        CMS solutions like
+                        Shopify and WordPress.</p>
+                    <div class="card-footer">
+                        <div class="footer-list">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>Shopify Stores</li>
+                                <li>WordPress Development</li>
+                                <li>Webflow Systems</li>
+                                <li>No-Code Automation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 08: Hire Dedicated Resources -->
+                <div class="service-item-card" onclick="location.href='services.html'">
+                    <div class="card-num p-sub">07</div>
+                    <div class="card-arrow">↗</div>
+                    <h3 class="h-md">Hire Dedicated <br> Resources</h3>
+                    <p class="p-main !text-sm !opacity-60">Scale your team with expert talent. We provide designers and
+                        engineers who
+                        integrate with your workflow.</p>
+                    <div class="card-footer">
+                        <div class="footer-list">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>Dedicated Dev Teams</li>
+                                <li>UX/UI Specialists</li>
+                                <li>Project Management</li>
+                                <li>Quality Assurance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Global Achievements Section -->
+    <section class="achievements-section">
+        <div class="achievements-header reveal">
+            <h2 class="h-lg grad-text">Our Global Achievements</h2>
+            <p class="p-main max-w-2xl mx-auto">Empowering businesses worldwide since 2011. We transform complex
+                challenges into digital success stories
+                across every continent.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-number">13+</span>
+                <span class="stat-label">Years of experience</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number">25k+</span>
+                <span class="stat-label">Active users</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Companies</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number">56%</span>
+                <span class="stat-label">Growth in revenue</span>
+            </div>
+        </div>
+
+        <!-- Animated Globe Container -->
+        <div class="globe-container reveal">
+            <!-- Three.js will inject canvas here -->
+        </div>
+    </section>
+
+    <!-- Case Studies Section (Stacked Scroll Animation) -->
+    <section class="case-studies pb-32" id="work">
+        <div
+            class="case-studies-header reveal px-20 py-24 flex justify-between items-end mx-auto w-full transition-all">
+            <h2 class="h-lg grad-text reveal">Selected Works</h2>
+            <div class="case-header-right">
+                <p class="p-sub max-w-xs">A curated selection of our most impactful digital transformations.</p>
+            </div>
+        </div>
+
+        <!-- Project Mosaic Container -->
+        <div class="project-mosaic container mx-auto">
+            <!-- Item 1: Quantum -->
+            <div class="mosaic-item large reveal" onclick="location.href='project-details.html?id=quantum'">
+                <div class="mosaic-img-box">
+                    <img src="assets/images/proj_quantum.png" alt="Quantum Diagnostics">
+                </div>
+                <div class="mosaic-content">
+                    <div class="mosaic-meta">
+                        <span class="mosaic-tag">AI Healthcare // 01</span>
+                        <h3 class="mosaic-title">Quantum <br> Diagnostics</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Cubekit -->
+            <div class="mosaic-item tall reveal" onclick="location.href='project-details.html?id=cubekit'">
+                <div class="mosaic-img-box">
+                    <img src="assets/images/proj_cubekit.png" alt="Cubekit">
+                </div>
+                <div class="mosaic-content">
+                    <div class="mosaic-meta">
+                        <span class="mosaic-tag">Product Design // 02</span>
+                        <h3 class="mosaic-title">Cubekit <br> Ecosystem</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Ephemeral -->
+            <div class="mosaic-item medium reveal" onclick="location.href='project-details.html?id=ephemeral'">
+                <div class="mosaic-img-box">
+                    <img src="assets/images/proj_ephemeral.png" alt="Ephemeral">
+                </div>
+                <div class="mosaic-content">
+                    <div class="mosaic-meta">
+                        <span class="mosaic-tag">Branding // 03</span>
+                        <h3 class="mosaic-title">Ephemeral Identity</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4: Warpspeed -->
+            <div class="mosaic-item medium reveal" onclick="location.href='project-details.html?id=warpspeed'">
+                <div class="mosaic-img-box">
+                    <img src="assets/images/proj_globalbank.png" style="filter: hue-rotate(45deg);" alt="Warpspeed">
+                </div>
+                <div class="mosaic-content">
+                    <div class="mosaic-meta">
+                        <span class="mosaic-tag">Performance // 04</span>
+                        <h3 class="mosaic-title">Warpspeed Engine</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Integrated View All Button (Outside Stack Wrapper for Proper Flow) -->
+        <div class="flex justify-center pb-2 mt-4 relative z-20">
+            <a href="work.html" class="projects-view-all !py-3 !px-8 !gap-3">
+                <span class="view-all-text !text-sm !tracking-[0.2em]">View All Projects</span>
+                <div class="view-all-circle !w-10 !h-10">
+                    <span class="arrow-icon !text-lg">↗</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-header reveal">
+            <span class="h-sm mb-6">Testimonials</span>
+            <h2 class="h-lg grad-text">What our clients <br> say about us</h2>
+        </div>
+
+        <div class="marquee-container">
+            <!-- First Track: Right to Left -->
+            <div class="testimonial-track track-1">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="test-star">★★★★★</div>
+                        <p class="test-quote">"The AI diagnostic implementation transformed our surgical workflow.
+                            Softwera Innovation is truly elite."</p>
+                    </div>
+                    <div class="test-author">
+                        <div class="author-info">
+                            <h4 class="h-md !text-lg">Sarah Chen</h4>
+                            <p class="p-sub">CTO at Clinix²</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="test-star">★★★★★</div>
+                        <p class="test-quote">"Unparalleled design-led engineering. They delivered our platform
+                            architecture months ahead of schedule."</p>
+                    </div>
+                    <div class="test-author">
+                        <div class="author-info">
+                            <h4 class="h-md !text-lg">Mark Thompson</h4>
+                            <p class="p-sub">Founder, Warpspeed</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="test-star">★★★★★</div>
+                        <p class="test-quote">"The most forward-thinking design studio we've ever partnered with. Their
+                            attention to detail is obsessive."</p>
+                    </div>
+                    <div class="test-author">
+                        <div class="author-info">
+                            <h4 class="h-md !text-lg">Elena Rodriguez</h4>
+                            <p class="p-sub">VP Design, GlobalBank</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Track: Left to Right -->
+            <div class="testimonial-track track-2 mt-8">
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="test-star">★★★★★</div>
+                        <p class="test-quote">"They translated our complex vision into a seamless brand identity. A
+                            literal game-changer for Ephemeral."</p>
+                    </div>
+                    <div class="test-author">
+                        <div class="author-info">
+                            <h4 class="h-md !text-lg">David Kim</h4>
+                            <p class="p-sub">Creative Lead, Ephemeral</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="test-star">★★★★★</div>
+                        <p class="test-quote">"The performance optimization they performed on our e-commerce stack led
+                            to a 40% increase in conversion."</p>
+                    </div>
+                    <div class="test-author">
+                        <div class="author-info">
+                            <h4 class="h-md !text-lg">Lisa Wang</h4>
+                            <p class="p-sub">E-com Director, Magnolia</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="test-star">★★★★★</div>
+                        <p class="test-quote">"Exceptional talent. The dedicated resources they provided integrated
+                            perfectly with our internal team."</p>
+                    </div>
+                    <div class="test-author">
+                        <div class="author-info">
+                            <h4 class="h-md !text-lg">James Miller</h4>
+                            <p class="p-sub">Product Manager, Curehire</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Ethereal Banner CTA -->
+    <section class="cta-section">
+        <div class="cta-banner reveal">
+            <h2 class="h-lg">We turn bold ideas into <br> <em>powerful digital realities.</em></h2>
+            <a href="contact.html" class="cta-glass-btn">
+                Let's work together <span class="arrow-icon">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Redesigned Premium Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">SOFTWERA<span class="text-brand">INNOVATION</span></a>
+                <p>Empowering forward-thinking organizations with design-led engineering and intelligent AI solutions.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="work.html" class="footer-link">Portfolio</a>
+                <a href="about.html" class="footer-link">Our Story</a>
+                <a href="about.html" class="footer-link">Team</a>
+                <a href="careers.html" class="footer-link">Careers</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html" class="footer-link">Product Design</a>
+                <a href="services.html" class="footer-link">AI Engineering</a>
+                <a href="services.html" class="footer-link">Web Ecosystems</a>
+                <a href="services.html" class="footer-link">Cloud Solutions</a>
+                <a href="services.html" class="footer-link">Dedicated Teams</a>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="mailto:hello@softwera.com" class="footer-link">hello@softwera.com</a>
+                <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Twitter / X</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 SOFTWERA INNOVATION. ALL RIGHTS RESERVED.</p>
+            <div class="footer-socials">
+                <a href="privacy-policy.html" class="social-link">Privacy Policy</a>
+                <a href="terms-of-service.html" class="social-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/hero-animation.js"></script>
+    <script src="js/globe-animation.js"></script>
+</body>
+
+</html>

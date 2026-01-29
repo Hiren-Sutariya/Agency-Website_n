@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | SOFTWERA INNOVATION</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="case-study-antimatter bg-black overflow-x-hidden">
+
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Navigation: Floating Island Style -->
+    <nav class="floating-nav-wrapper">
+        <div class="nav-pill">
+            <div class="logo">
+                <a href="index.html">SOFTWERA<span>INNOVATION</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="work.html" class="nav-item">Work</a>
+
+                <div class="nav-item-services nav-item">
+                    <a href="services.html" class="services-trigger">Services</a>
+                    <!-- Mega Menu Dropdown -->
+                    <div class="mega-menu">
+                        <!-- Column 1 -->
+                        <div class="mega-column">
+                            <div class="mega-group active">
+                                <div class="group-header">
+                                    <span class="group-icon">−</span>
+                                    <h4 class="active-title">Mobile App Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Native App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Hybrid App Development</a>
+                                    <a href="services.html" class="mega-sub-item">Progressive Web App Development</a>
+                                    <a href="services.html" class="mega-sub-item">App Migrations & Integrations</a>
+                                    <a href="services.html" class="mega-sub-item">App Support & Maintenance</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Web Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Frontend Development
+                                        (React/Next.js)</a>
+                                    <a href="services.html" class="mega-sub-item">Backend & APIs (Node/Python)</a>
+                                    <a href="services.html" class="mega-sub-item">Full Stack Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">E-commerce Development</a>
+                                    <a href="services.html" class="mega-sub-item">CMS Integration</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>AI & Machine Learning</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Custom LLM Training</a>
+                                    <a href="services.html" class="mega-sub-item">Computer Vision</a>
+                                    <a href="services.html" class="mega-sub-item">NLP Solutions</a>
+                                    <a href="services.html" class="mega-sub-item">Predictive Analytics</a>
+                                    <a href="services.html" class="mega-sub-item">AI Strategy Consulting</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>UI/UX & Product Design</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">User Research</a>
+                                    <a href="services.html" class="mega-sub-item">Wireframing & Prototyping</a>
+                                    <a href="services.html" class="mega-sub-item">Visual Identity Design</a>
+                                    <a href="services.html" class="mega-sub-item">Design Systems</a>
+                                    <a href="services.html" class="mega-sub-item">Motion Design</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Cloud & DevOps</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">AWS/Google Cloud Setup</a>
+                                    <a href="services.html" class="mega-sub-item">CI/CD Pipeline Automation</a>
+                                    <a href="services.html" class="mega-sub-item">Serverless Architecture</a>
+                                    <a href="services.html" class="mega-sub-item">Security Auditing</a>
+                                    <a href="services.html" class="mega-sub-item">Infrastructure as Code</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Marketing & Growth</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Search Engine Optimization</a>
+                                    <a href="services.html" class="mega-sub-item">Content Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Performance Marketing</a>
+                                    <a href="services.html" class="mega-sub-item">Social Media Management</a>
+                                    <a href="services.html" class="mega-sub-item">Conversion Rate Optimization</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="mega-column">
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Game Development</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Unity & Unreal Engine</a>
+                                    <a href="services.html" class="mega-sub-item">2D/3D Art & Animation</a>
+                                    <a href="services.html" class="mega-sub-item">Multiplayer Systems</a>
+                                    <a href="services.html" class="mega-sub-item">AR/VR Experiences</a>
+                                    <a href="services.html" class="mega-sub-item">Roblox Game Creation</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Resource Augmentation</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Dedicated Developers</a>
+                                    <a href="services.html" class="mega-sub-item">Team Extension</a>
+                                    <a href="services.html" class="mega-sub-item">Project Managers</a>
+                                    <a href="services.html" class="mega-sub-item">QA Engineers</a>
+                                    <a href="services.html" class="mega-sub-item">Tech Lead Consulting</a>
+                                </div>
+                            </div>
+                            <div class="mega-group">
+                                <div class="group-header">
+                                    <span class="group-icon">+</span>
+                                    <h4>Innovation & Strategy</h4>
+                                </div>
+                                <div class="group-content">
+                                    <a href="services.html" class="mega-sub-item">Digital Transformation</a>
+                                    <a href="services.html" class="mega-sub-item">Product Strategy</a>
+                                    <a href="services.html" class="mega-sub-item">Feasibility Studies</a>
+                                    <a href="services.html" class="mega-sub-item">MVP Development</a>
+                                    <a href="services.html" class="mega-sub-item">Project Rescue</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="careers.html" class="nav-item">Careers</a>
+            </div>
+
+            <a href="contact.html" class="nav-cta">
+                Get in touch ↗
+            </a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="as-hero container mx-auto px-10">
+        <h1 class="as-hero-title reveal" id="proj-title">Project Name.</h1>
+        <div class="as-hero-visual reveal">
+            <img src="" alt="Hero Visual" id="proj-main-image">
+        </div>
+    </header>
+
+    <!-- 2. The Brief Section -->
+    <section class="as-section container mx-auto px-10">
+        <div class="as-brief-grid">
+            <div class="reveal">
+                <span class="h-sm mb-6 block text-brand">The Brief.</span>
+                <p class="as-summary-text mb-12" id="proj-summary">
+                    Synthesizing complex AI capabilities into an intuitive diagnostic experience. Clinix AI represents
+                    the next frontier in healthcare technology, bridging the gap between professional expertise and
+                    intelligent automation.
+                </p>
+                <!-- Added Website Link -->
+                <a href="#" id="proj-website" target="_blank"
+                    class="as-tech-pill !px-10 !py-5 !bg-white !text-black font-bold hover:scale-105 transition-transform inline-flex items-center gap-4">
+                    Visit Website ↗
+                </a>
+            </div>
+            <div class="reveal">
+                <div class="mb-10">
+                    <span class="h-sm mb-6 block opacity-40">Tech Stack.</span>
+                    <div id="proj-tech" class="flex flex-wrap">
+                        <!-- Tech Pills -->
+                    </div>
+                </div>
+                <div>
+                    <span class="h-sm mb-6 block opacity-40">Duration.</span>
+                    <p class="h-md !text-xl" id="proj-duration">6 Months</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Key Stats Bento Grid -->
+    <section class="as-section container mx-auto px-10">
+        <div class="mb-20 reveal">
+            <h2 class="h-lg">Key Stats.</h2>
+        </div>
+        <div class="as-bento-grid">
+            <div class="as-bento-card wide reveal">
+                <span class="as-stat-num" id="stat-1-val">45%</span>
+                <p class="h-md !text-2xl">Efficiency Improvement</p>
+                <p class="p-sub !text-lg !opacity-40">Average reduction in diagnostic time across global facilities.</p>
+            </div>
+            <div class="as-bento-card reveal">
+                <span class="as-stat-num" id="stat-2-val">12k</span>
+                <p class="h-md !text-2xl">Active Professionals</p>
+            </div>
+            <div class="as-bento-card reveal">
+                <p class="h-md !text-2xl mb-4">Scalability</p>
+                <span class="as-stat-num" id="stat-3-val">0</span>
+                <p class="p-sub !text-lg !opacity-40">Downtime since deployment.</p>
+            </div>
+            <div class="as-bento-card wide reveal">
+                <p class="h-md !text-3xl mb-10">"The architecture behind Clinix redefined our entire surgical workflow."
+                </p>
+                <span class="h-sm opacity-40">Chief Medical Officer, Clinix Global</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. UI Showcase Section -->
+    <section class="as-section container mx-auto px-10">
+        <div class="mb-20 text-center reveal">
+            <h2 class="h-lg">System Design.</h2>
+            <p class="p-main opacity-60 mt-4">Crafting a language that speaks to professionals.</p>
+        </div>
+        <div class="as-ui-showcase">
+            <div class="as-ui-frame reveal">
+                <img src="" alt="UI Screen 1" class="dyn-img w-full">
+            </div>
+            <div class="as-ui-frame reveal md:mt-24">
+                <img src="" alt="UI Screen 2" class="dyn-img w-full">
+            </div>
+            <div class="as-ui-frame reveal">
+                <img src="" alt="UI Screen 3" class="dyn-img w-full">
+            </div>
+            <div class="as-ui-frame reveal md:mt-24">
+                <img src="" alt="UI Screen 4" class="dyn-img w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Future Section / Large Impact -->
+    <section class="as-section bg-[#080808] border-y border-white/5 reveal">
+        <div class="container mx-auto px-10 text-center py-20">
+            <h2 class="h-xl !text-6xl md:!text-8xl mb-12">Building the <br><span class="text-brand">Future.</span></h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="p-main !text-2xl !leading-relaxed !opacity-70" id="proj-closing">
+                    Every detail was scrutinized to ensure that Clinix AI wasn't just a tool, but a standard-bearer for
+                    the next decade of medical innovation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redesigned Premium Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">SOFTWERA<span class="text-brand">INNOVATION</span></a>
+                <p>Empowering forward-thinking organizations with design-led engineering and intelligent AI solutions.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="work.html" class="footer-link">Portfolio</a>
+                <a href="about.html" class="footer-link">Our Story</a>
+                <a href="about.html" class="footer-link">Team</a>
+                <a href="careers.html" class="footer-link">Careers</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html" class="footer-link">Product Design</a>
+                <a href="services.html" class="footer-link">AI Engineering</a>
+                <a href="services.html" class="footer-link">Web Ecosystems</a>
+                <a href="services.html" class="footer-link">Cloud Solutions</a>
+                <a href="services.html" class="footer-link">Dedicated Teams</a>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="mailto:hello@softwera.com" class="footer-link">hello@softwera.com</a>
+                <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Twitter / X</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 SOFTWERA INNOVATION. ALL RIGHTS RESERVED.</p>
+            <div class="footer-socials">
+                <a href="privacy-policy.html" class="social-link">Privacy Policy</a>
+                <a href="terms-of-service.html" class="social-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        const projects = {
+            'quantum': {
+                title: "Clinix AI.",
+                summary: "Synthesizing complex AI capabilities into an intuitive diagnostic experience. Clinix AI represents the next frontier in healthcare technology, bridging the gap between professional expertise and intelligent automation.",
+                tech: ["RAG AI", "React", "Node.js", "WebSockets", "Three.js"],
+                duration: "8 Months",
+                website: "https://clinix.ai",
+                image: "assets/images/proj_quantum.png",
+                stat1: "45%",
+                stat2: "12k",
+                stat3: "0",
+                closing: "Every detail was scrutinized to ensure that Clinix AI wasn't just a tool, but a standard-bearer for the next decade of medical innovation."
+            },
+            'cubekit': {
+                title: "Cubekit Platform.",
+                summary: "Redefining SaaS architecture for massive scale. Cubekit provides a modular infrastructure that handles millions of requests with sub-millisecond precision.",
+                tech: ["Go", "Kubernetes", "Redis", "gRPC", "React"],
+                duration: "12 Months",
+                website: "https://cubekit.io",
+                image: "assets/images/proj_cubekit.png",
+                stat1: "99.9%",
+                stat2: "5M+",
+                stat3: "1.2ms",
+                closing: "Precision engineering at its core. Cubekit is built for the organizations that power the modern world."
+            },
+            'ephemeral': {
+                title: "Ephemeral Identity.",
+                summary: "A fluid, liquid-motion brand identity that adapts to every digital surface it touches. We made the concept of 'digital presence' tangible.",
+                tech: ["WebGL", "Figma", "After Effects", "GSAP"],
+                duration: "4 Months",
+                website: "https://ephemeral.brand",
+                image: "assets/images/proj_ephemeral.png",
+                stat1: "3x",
+                stat2: "50k",
+                stat3: "24/7",
+                closing: "Consistency in motion. Ephemeral is proof that a brand can be both liquid and solid at the same time."
+            },
+            'warpspeed': {
+                title: "Warpspeed Engine.",
+                summary: "Optimizing the core of the web. We pushed the limits of browser rendering to deliver experiences faster than thought.",
+                tech: ["V8 Engine", "Rust", "WebAssembly", "Core JS"],
+                duration: "10 Months",
+                website: "https://warpspeed.dev",
+                image: "assets/images/proj_quantum.png",
+                stat1: "0.2s",
+                stat2: "100+",
+                stat3: "99%",
+                closing: "Speed is the ultimate luxury. Warpspeed ensures that no user is ever left waiting for a single frame."
+            },
+            'globalbank': {
+                title: "GlobalBank Future.",
+                summary: "Redefining trust in the digital age. A banking interface that is secure, transparent, and surprisingly human.",
+                tech: ["Fintech SDK", "Next.js", "Encryption", "React Native"],
+                duration: "14 Months",
+                website: "https://globalbank.com",
+                image: "assets/images/proj_globalbank.png",
+                stat1: "10M+",
+                stat2: "2M+",
+                stat3: "Zero",
+                closing: "Security without friction. GlobalBank is the blueprint for the next generation of financial transparency."
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        let pid = params.get('id') || 'quantum';
+
+        if (projects[pid]) {
+            const data = projects[pid];
+
+            document.getElementById('proj-title').innerText = data.title;
+            document.getElementById('proj-summary').innerText = data.summary;
+            document.getElementById('proj-duration').innerText = data.duration;
+            document.getElementById('proj-closing').innerText = data.closing;
+            document.getElementById('stat-1-val').innerText = data.stat1;
+            document.getElementById('stat-2-val').innerText = data.stat2;
+            document.getElementById('stat-3-val').innerText = data.stat3;
+
+            // Website link
+            const webLink = document.getElementById('proj-website');
+            webLink.href = data.website;
+
+            // Tech pills
+            const techContainer = document.getElementById('proj-tech');
+            data.tech.forEach(t => {
+                const p = document.createElement('span');
+                p.className = 'as-tech-pill';
+                p.innerText = t;
+                techContainer.appendChild(p);
+            });
+
+            // Images
+            document.getElementById('proj-main-image').src = data.image;
+            document.querySelectorAll('.dyn-img').forEach(img => img.src = data.image);
+
+            document.title = `${data.title} | SOFTWERA INNOVATION`;
+        }
+
+        // Entrance
+        window.addEventListener('load', () => {
+            gsap.from('.reveal', {
+                y: 50,
+                opacity: 0,
+                stagger: 0.1,
+                duration: 1.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: '.reveal',
+                    start: 'top 90%'
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

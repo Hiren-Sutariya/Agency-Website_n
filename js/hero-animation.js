@@ -40,7 +40,13 @@ function initHeroAnimation() {
 
     heroScene = new THREE.Scene();
     heroCamera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-    heroCamera.position.z = 22; // Slightly zoomed out for larger sphere
+
+    // Responsive Camera Position
+    if (window.innerWidth < 768) {
+        heroCamera.position.z = 32; // "Little big a small" - making it slightly smaller by moving camera back
+    } else {
+        heroCamera.position.z = 22; // Desktop standard
+    }
 
     heroRenderer = new THREE.WebGLRenderer({
         canvas: canvas,
@@ -230,6 +236,13 @@ function initHeroAnimation() {
         heroCamera.aspect = window.innerWidth / window.innerHeight;
         heroCamera.updateProjectionMatrix();
         heroRenderer.setSize(window.innerWidth, window.innerHeight);
+
+        // Dynamic resize logic
+        if (window.innerWidth < 768) {
+            heroCamera.position.z = 32;
+        } else {
+            heroCamera.position.z = 22;
+        }
     });
 }
 
@@ -342,9 +355,9 @@ function initDockAnimation() {
     if (servicesTrack && servicesSection) {
         ScrollTrigger.matchMedia({
             // Desktop: Horizontal Scroll
-            "(min-width: 769px)": function () {
+            "(min-width: 1025px)": function () {
                 const trackWidth = servicesTrack.scrollWidth;
-                const scrollDistance = trackWidth * 1.5;
+                const scrollDistance = trackWidth * 3.5; // Increased from 1.5 to fix "jump" and smooth out scrolling
 
                 // Use gsap.set to allow proper reverting
                 gsap.set(servicesSection, { height: `${scrollDistance + window.innerHeight}px` });
@@ -392,8 +405,8 @@ function initDockAnimation() {
                     gsap.set(servicesSection, { clearProps: "height" });
                 };
             },
-            // Mobile: Reset
-            "(max-width: 768px)": function () {
+            // Tablet/Mobile: Reset
+            "(max-width: 1024px)": function () {
                 gsap.set(servicesSection, { clearProps: "height" });
                 gsap.set(servicesTrack, { clearProps: "x" }); // Ensure track is reset
 

@@ -150,7 +150,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupMarkersAndArcs();
 
-    camera.position.z = 28;
+    setupMarkersAndArcs();
+
+    // Responsive Camera
+    if (window.innerWidth < 768) {
+        camera.position.z = 45; // Much further back on mobile to show full globe
+    } else {
+        camera.position.z = 28;
+    }
 
     // 4. Animation Sequencing Logic
     let hasStartedAnimation = false;
@@ -253,5 +260,11 @@ document.addEventListener('DOMContentLoaded', () => {
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
+
+        if (window.innerWidth < 768) {
+            camera.position.z = 45;
+        } else {
+            camera.position.z = 28;
+        }
     });
 });

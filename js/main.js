@@ -165,6 +165,26 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.to(megaMenu, { opacity: 0, y: 15, scale: 0.98, pointerEvents: 'none', duration: 0.4, ease: "power2.inOut" });
         });
     }
+
+    // --- MOBILE MENU LOGIC ---
+    const burgerTrigger = document.querySelector('.burger-menu-trigger');
+    const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-cta-btn');
+
+    if (burgerTrigger && mobileOverlay) {
+        burgerTrigger.addEventListener('click', () => {
+            document.body.classList.toggle('menu-open');
+            mobileOverlay.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.body.classList.remove('menu-open');
+                mobileOverlay.classList.remove('active');
+            });
+        });
+    }
 });
 
 // Work Page Reveal Logic
